@@ -1,10 +1,18 @@
-import logo from './logo.svg';
+import React, { useState } from "react";
 import './App.css';
 
+import TodoList from './components/TodoList';
+import Form from './components/Form';
+
 function App() {
+  const [inputText, setInputText] = useState("");
   return (
     <div className="App">
-      <h1>Hello React</h1>
+      <header>
+        <h1>Jordan's Todo List</h1>
+      </header>
+      <Form />
+      <TodoList />
     </div>
   );
 }
